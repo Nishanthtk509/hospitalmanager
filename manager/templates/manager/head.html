@@ -1,0 +1,33 @@
+{% extends 'manager/base.html' %}
+
+{% block content %}
+
+
+<section class="pt-5">
+    <div class="container pt-5">
+        <h3 class="text-dark text-center">DEPARTMENT HEAD</h3>
+        <div class="row pt-5">
+            {% for head in head %}
+                <div class="col-lg-4">
+                    <div class="card" style="width: 15rem;height: 32rem;">
+                        <img src="{{head.image.url}}" alt="" style="height: 15rem%;width: 100%;">
+                            <div class="card-body">
+                                
+                                <p class="text-dark">{{head.Name}}</p>
+                                        
+                                <p class="text-dark">{{head.Department}}</p>
+                                <p class="text-dark">{{head.Description}}</p>
+                                        
+                            </div>
+                    </div>
+                    <br>
+                </div>
+        
+               
+            
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{% endblock %}

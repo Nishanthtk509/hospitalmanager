@@ -1,0 +1,32 @@
+{% extends 'manager/base.html' %}
+
+{% block content %}
+
+<section class="pt-5">
+    <div class="container pt-5">
+        <h3 class="text-dark text-center">OUR STAFFS</h3>
+        <div class="row">
+            {% for staff in staff %}
+                <div class="col-lg-4">
+                    <div class="card" style="width: 15rem;height: 28rem;">
+                        <img src="{{staff.image.url}}" alt="" style="height: 15rem;width: 100%;">
+                            <div class="card-body">
+                                
+                                <h4 class="text-dark">{{staff.Name}}</h4>
+                                        
+                                <h6 class="text-dark">{{staff.Department}}</h6>
+                                <p class="text-dark">{{staff.Description}}</p>
+                                        
+                            </div>
+                    </div>
+                    <br>
+                </div>
+        
+               
+            
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{% endblock %}
